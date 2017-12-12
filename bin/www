@@ -1,0 +1,16 @@
+let then = require('thenjs');
+let app = require('../app');
+let config = require('config');
+let env = app.get('env');
+let port = app.get('port');
+let log4js = require('log4js');
+let logger = log4js.getLogger(config.get('logger.name'));
+
+then(defer => {
+  app.listen(port, defer);
+}).then(() => {
+  logger.info(`Server is listening on ${port} and env is ${env}`);
+}).fail((defer, err) => {
+  logger.error(err.message);
+  process.exit(0);
+});

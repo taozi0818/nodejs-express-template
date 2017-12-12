@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "Server",
+      "script": "bin/www",
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

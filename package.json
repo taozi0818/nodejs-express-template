@@ -1,0 +1,37 @@
+{
+  "name": "nodejs-express-template",
+  "version": "1.0.0",
+  "description": "Template for Nodejs Application",
+  "scripts": {
+    "start": "node bin/www",
+    "lint": "./node_modules/.bin/eslint .",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taozi0818/nodejs-express-template.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Template"
+  ],
+  "author": "tyt <783279113@qq.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/taozi0818/nodejs-express-template#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.28.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "log4js": "1.1.1",
+    "thenjs": "^2.0.6",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "husky": "^0.14.3"
+  }
+}
