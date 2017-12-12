@@ -16,7 +16,7 @@
     "Express",
     "Template"
   ],
-  "author": "tyt <783279113@qq.com>",
+  "author": "tyt <taoz110818@gmail.com>",
   "license": "ISC",
   "homepage": "https://github.com/taozi0818/nodejs-express-template#readme",
   "dependencies": {
@@ -25,6 +25,7 @@
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "log4js": "1.1.1",
+    "sequelize": "^4.28.0",
     "thenjs": "^2.0.6",
     "xml2js": "^0.4.19"
   },
