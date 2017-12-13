@@ -4,5 +4,13 @@
   },
   "logger": {
     "name": "Server"
+  },
+  "db": {
+    "host": "host",
+    "port": "port",
+    "database": "databaseName",
+    "user": "username",
+    "password": "password",
+    "logging": true
   }
 }

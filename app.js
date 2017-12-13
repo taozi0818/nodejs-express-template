@@ -1,3 +1,7 @@
+let sequelize = require('sequelize');
+let prestart = require('./prestart');
+prestart(sequelize);
+
 let express = require('express');
 let config = require('config');
 let bodyParser = require('body-parser');

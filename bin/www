@@ -1,16 +1,38 @@
 let then = require('thenjs');
-let app = require('../app');
 let config = require('config');
+let app = require('../app');
 let env = app.get('env');
 let port = app.get('port');
+let sequelize = require('../db/sequelize');
 let log4js = require('log4js');
 let logger = log4js.getLogger(config.get('logger.name'));
 
 then(defer => {
+
+  // Verify username and password for DB
+  sequelize
+    .authenticate()
+    .then(() => { defer(); })
+    .catch((err) => { defer('Cannot connect to DB: ' + err.message); });
+
+}).then(defer => {
+
+  /**
+   * Connect Models you defined in project and tables in DB.
+   * You can use this method to create table automatically in DB,
+   * when you have a new Model never been defined before.
+   * But it doesn't work when you change your tables' structure.
+   */
+  sequelize
+    .sync()
+    .then(() => { defer(); })
+    .catch(err => { defer(err); })
+
+}).then(defer => {
   app.listen(port, defer);
 }).then(() => {
   logger.info(`Server is listening on ${port} and env is ${env}`);
 }).fail((defer, err) => {
-  logger.error(err.message);
+  logger.error(err.message || err);
   process.exit(0);
 });

@@ -1,0 +1,16 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "logger": {
+    "name": "Server"
+  },
+  "db": {
+    "host": "localhost",
+    "port": "5432",
+    "database": "test",
+    "user": "tyt",
+    "password": "passwd",
+    "logging": true
+  }
+}
