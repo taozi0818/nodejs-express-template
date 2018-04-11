@@ -39,3 +39,7 @@ pm2 start ecosystem.json
 ```bash
 node bin/www NODE_ENV=$env
 ```
+
+## CHANGE LOG
+
+[CHANGE LOG](https://github.com/taozi0818/nodejs-express-template/blob/master/CHANGELOG.md)
