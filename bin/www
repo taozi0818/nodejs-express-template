@@ -6,8 +6,14 @@ let port = app.get('port');
 let sequelize = require('../db/sequelize');
 let log4js = require('log4js');
 let logger = log4js.getLogger(config.get('logger.name'));
+let prestart = require('../prestart');
+
+prestart();
 
 then(defer => {
+
+  Services.System.migration(defer);
+}).then(defer => {
 
   // Verify username and password for DB
   sequelize
@@ -26,7 +32,7 @@ then(defer => {
   sequelize
     .sync()
     .then(() => { defer(); })
-    .catch(err => { defer(err); })
+    .catch(err => { defer(err); });
 
 }).then(defer => {
   app.listen(port, defer);

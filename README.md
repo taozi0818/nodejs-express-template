@@ -37,7 +37,7 @@ pm2 start ecosystem.json
 - Without pm2
 
 ```bash
-node bin/www NODE_ENV=$env
+NODE_ENV=$env node bin/www
 ```
 
 ## CHANGE LOG
