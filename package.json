@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node bin/www",
     "lint": "./node_modules/.bin/eslint $(git status --porcelain --untracked-files=no | awk '{print $2}' | grep -E \".js$\")",
-    "precommit": "npm run lint"
+    "migration-validator": "node bin/migration-validator.js",
+    "precommit": "npm run lint && npm run migration-validator"
   },
   "repository": {
     "type": "git",
