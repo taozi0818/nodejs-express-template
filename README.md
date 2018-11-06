@@ -18,6 +18,23 @@ You can use it to set up a application quickly and conveniently.
 
 - Code linting tool: Eslint
 
+## Structure
+
+```
+├── api
+│   ├── controllers # your all Controllers, name them with XxxController.js.
+│   ├── models # your all data models.
+│   ├── routers # your all router files.
+│   └── services # your all serivces, name them with XxxService.js.
+├── bin # some execute scripts and index file for projects.
+├── config # all config files.
+├── db
+│   └── migrations # save files for your all database migrations. It's recommanded that name them with date.
+├── middlewares # all middlewares.
+└── util # some util for your projects.
+
+```
+
 ## Usage
 
 ### Install dependencies
