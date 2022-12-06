@@ -21,9 +21,9 @@
   "license": "ISC",
   "homepage": "https://github.com/taozi0818/nodejs-express-template#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.20.1",
     "config": "^1.28.1",
-    "express": "^4.16.2",
+    "express": "^4.18.2",
     "glob": "^7.1.2",
     "lodash": "^4.17.4",
     "log4js": "1.1.1",
